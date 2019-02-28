@@ -13,11 +13,11 @@ __CALC = {
 
 
 def is_delim(c):
-    return c in " \t"
+    return c in (" ", "\t")
 
 
 def is_unary_candidate(op):
-    return op in "+-"
+    return op in ("+", "-")
 
 
 def to_unary(op):
@@ -29,15 +29,15 @@ def is_unary(op):
 
 
 def is_operation(op):
-    return op in "*/+-" or is_unary(op)
+    return op in ("+", "-", "*", "/") or is_unary(op)
 
 
 def priority(op):
     if is_unary(op):
         return 2
-    if op in "+-":
+    if op in ("+", "-"):
         return 0
-    if op in "*/":
+    if op in ("*", "/"):
         return 1
     return -1
 
