@@ -3,7 +3,11 @@
 
 
 def uncover(obj):
-    if not (isinstance(obj, list) or isinstance(obj, set) or isinstance(obj, tuple)):
+    if not (
+        isinstance(obj, list) or
+        isinstance(obj, set) or
+        isinstance(obj, tuple)
+    ):
         return [obj]
     res = []
     for v in obj:

@@ -12,9 +12,9 @@ def calculator(x, y, operator):
     '''
 
     calc = {
-        "plus":   lambda x, y: x + y,
-        "minus":  lambda x, y: x - y,
-        "mult":   lambda x, y: x * y,
+        "plus": lambda x, y: x + y,
+        "minus": lambda x, y: x - y,
+        "mult": lambda x, y: x * y,
         "divide": lambda x, y: x / y
     }
 
